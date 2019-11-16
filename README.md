@@ -22,6 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
 ## usersテーブル
 
 |Column|Type|Options|
@@ -29,6 +30,7 @@ Things you may want to cover:
 |email|string|null: false|
 |paaword|string|null: false|
 |username|string|null: false|
+
 ### Association
 - has_many :comments
 - has_many :groups, through: :groups_users
