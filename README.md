@@ -29,9 +29,8 @@ Things you may want to cover:
 |email|string|null: false|
 |paaword|string|null: false|
 |username|string|null: false|
-|group_id|integer|null: false, foreign_key: true|
 ### Association
-- has_many :chats
+- has_many :comments
 - has_many :groups, through: :groups_users
 
 ## groupsテーブル
@@ -44,24 +43,16 @@ Things you may want to cover:
 ### Association
 - has_many :users, through: :groups_users
 
-## chatsテーブル
+## commentsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
+|comment|text||
+|image|text||
 |users_id|integer|null: false, foreign_key: ture|
 
 ### Association
 - belongs_to :user
-- has_many :photos
-
-## photosテーブル
-
-|Column|Type|Options|
-|------|----|-------|
-|chats_id|integer|null: false, foreign_key: true|
-
-### Association
-- belongs_to: chats
 
 ## groups_usersテーブル
 
