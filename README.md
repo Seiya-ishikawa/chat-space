@@ -42,6 +42,7 @@ Things you may want to cover:
 |name|string|null: false|
 
 ### Association
+- has_many :comments
 - has_many :users, through: :groups_users
 
 ## commentsテーブル
@@ -54,6 +55,7 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
+- belongs_to :group
 
 ## groups_usersテーブル
 
