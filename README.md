@@ -54,6 +54,7 @@ Things you may want to cover:
 |comment|text| |
 |image|text| |
 |user_id|integer|null: false, foreign_key: ture|
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
