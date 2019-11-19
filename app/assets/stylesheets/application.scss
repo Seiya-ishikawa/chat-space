@@ -1,6 +1,7 @@
 @import "font-awesome-sprockets";
 @import "./reset";
 
+$font-color: #ffffff;
 .side_bar{
   float: left;
   width: 300px;
@@ -14,11 +15,11 @@
  &__name{
     font-size: 16px;
     font-weight: bold;
-    color: #ffffff;
+    color: $font-color;
   }
  &__btn{
   &--icon{
-      color: white;
+      color: $font-color;
     }
   }
 }
@@ -32,18 +33,19 @@
  &--name{
   font-size: 15px;
   font-weight: bold;
-  color: #ffffff;
+  color: $font-color;
   &--message{
    margin-top:5px;
    font-size: 11px;
    font-weight: bold;
-   color: #ffffff;
+   color: $font-color;
   }
  }
 }
 }
 }
 
+$btn-color: #38aef0;
 .main{
   float: left;
   width: calc(100vw - 300px);
@@ -70,8 +72,8 @@
   &__btn{
     text-decoration: none;
    &--edit{
-    border: solid 1px lightskyblue;
-    color: lightskyblue;
+    border: solid 1px $btn-color;
+    color: $btn-color;
     line-height: 40px;
     margin-top: 28px;
     padding: 0 20px;
@@ -136,7 +138,7 @@
       line-height: 50px;
       width: 100px;
       height: 50px;
-      background-color: #38aef0;
+      background-color: $btn-color;
       color: #ffffff;
   }
   }
