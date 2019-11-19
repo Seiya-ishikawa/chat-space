@@ -50,8 +50,7 @@
   justify-content: space-between;
   height: 100px;
   display: flex;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding: 0 40px;
   &__content{
    &--group-name{
     margin-top: 35px;
@@ -69,9 +68,33 @@
    &--edit{
     border: solid 1px lightskyblue;
     color: lightskyblue;
+    line-height: 40px;
     margin-top: 28px;
-    padding: 10px 20px 10px;
+    padding: 0 20px;
    }
   }
  }
+ .main-message{
+   background-color: #fafafa;
+   padding: 46px 40px 0 40px;
+   height: 100vw;
+  &__user-name{
+    display: flex;
+    &--name{
+      font-size: 16px;
+      font-weight: bold;
+      color: #434a54;
+    }
+    &--time{
+      margin-left: 10px;
+      font-size: 12px;
+      color: #999999;
+    }
+  }
+  &__message{
+    margin-top: 10px;
+    font-size: 14px;
+    color: #434a54;
+  }
+}
 }
