@@ -1,6 +1,8 @@
 @import "font-awesome-sprockets";
+@import "./reset";
 
 .side_bar{
+  float: left;
   width: 300px;
 .header{
   height: 100px;
@@ -23,7 +25,7 @@
 
 .contents{
   background-color: #2f3e51;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 140px);
   padding: 20px 20px;
  &__group{
    margin-bottom: 40px;
@@ -44,9 +46,11 @@
 
 .main{
   float: left;
-  width: calc(100vw - 320px);
+  width: calc(100vw - 300px);
  .main-header{
-   border:solid 1px #eeeeee;
+   overflow: scroll;
+   border-bottom:solid 1px #eeeeee;
+   box-sizing: border-box;
   justify-content: space-between;
   height: 100px;
   display: flex;
@@ -75,11 +79,13 @@
   }
  }
  .main-message{
+   overflow: scroll;
    background-color: #fafafa;
-   padding: 46px 40px 0 40px;
-   height: 100vw;
+   padding: 0 40px 0 40px;
+   height: calc(100vh - 180px);
   &__user-name{
     display: flex;
+    padding-top: 46px;
     &--name{
       font-size: 16px;
       font-weight: bold;
@@ -97,4 +103,42 @@
     color: #434a54;
   }
 }
+ .main-form{
+  background-color: #ddd;
+  display: flex;
+  padding: 15px 40px;
+  .send-box{
+    display: flex;
+    width: 100%;
+  .input-box{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    &__text{
+      border: none;
+      height: 50px;
+      width: 100%;
+    }
+    &__picture{
+      position: absolute;
+      top: 9px;
+      right: 10px;
+      &--file{
+      display: none;
+      }
+    }
+  }
+  &__btn{
+    margin-left: 15px;
+     text-decoration: none;
+     border: none;
+      text-align: center;
+      line-height: 50px;
+      width: 100px;
+      height: 50px;
+      background-color: #38aef0;
+      color: #ffffff;
+  }
+  }
+ }
 }
