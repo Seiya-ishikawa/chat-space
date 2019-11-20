@@ -1,0 +1,26 @@
+.main
+ .main-header
+  .main-header__content
+   .main-header__content--group-name
+    gruop name
+   .main-header__content--group-member
+    Member :
+  =link_to "#", class: "main-header__btn" do
+   .main-header__btn--edit
+    Edit
+ .main-message
+  .main-message__user-name
+   .main-message__user-name--name
+    shouya
+   .main-message__user-name--time
+    2019/10/08/19:14:39
+  .main-message__message
+   This is a first message
+ .main-form
+  %form.send-box{method: "post"}
+   .input-box
+    %input.input-box__text{placeholder: "type a message"}
+    %label.input-box__picture
+     = icon('fas', 'image fa-2x')
+     %input.input-box__picture--file{type: "file"}
+   %input.send-box__btn{type: "submit",value:"Send"}
