@@ -1,6 +1,9 @@
 @import "font-awesome-sprockets";
 @import "./font-awesome";
 @import "./reset";
+@import "./user"
+@import "modules/user";
+
 
 $font-color: #ffffff;
 .side_bar{
