@@ -1,6 +1,11 @@
 @import "font-awesome-sprockets";
 @import "./font-awesome";
 @import "./reset";
+@import "./user";
+@import "modules/user";
+@import "config/colors";
+@import "modules.flash";
+
 
 $font-color: #ffffff;
 .side_bar{
@@ -145,4 +150,4 @@ $btn-color: #38aef0;
   }
  }
 }
->>>>>>> 5dc6eccbc8a2690e08d8c6e3b5ed692422c76b3b
+// >>>>>>> 5dc6eccbc8a2690e08d8c6e3b5ed692422c76b3b
