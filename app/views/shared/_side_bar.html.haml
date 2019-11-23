@@ -10,9 +10,9 @@
     = icon('fas', 'cog', class: "header__btn--icon")
  .contents
   -current_user.groups.each do |group|
-  .contents__group
-   = link_to '#' do
-   .contents__group--name
-    =group.name
-   .contents__group--message
-    メッセージはまだありません。
+   .contents__group
+    = link_to group_messages_path(group) do
+     .contents__group--name
+      =group.name
+     .contents__group--message
+      メッセージはまだありません。
