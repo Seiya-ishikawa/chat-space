@@ -9,13 +9,10 @@
    =link_to edit_user_path(current_user), class: "header__btn" do
     = icon('fas', 'cog', class: "header__btn--icon")
  .contents
+  -current_user.groups.each do |group|
   .contents__group
+   = link_to '#' do
    .contents__group--name
-    sample
+    =group.name
    .contents__group--message
-    Good bye work
-  .contents__group
-   .contents__group--name
-    sample2
-   .contents__group--message
-    hello my house
+    メッセージはまだありません。
