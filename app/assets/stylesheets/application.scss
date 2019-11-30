@@ -89,8 +89,10 @@ $btn-color: #38aef0;
  .main-message{
    overflow: scroll;
    background-color: #fafafa;
+   box-sizing: border-box;
    padding: 0 40px 0 40px;
    height: calc(100vh - 180px);
+   .messages{
   &__user-name{
     display: flex;
     padding-top: 46px;
@@ -109,6 +111,12 @@ $btn-color: #38aef0;
     margin-top: 10px;
     font-size: 14px;
     color: #434a54;
+    &--content{
+      color: $black;
+      font-size: 14px;
+      margin-bottom: 40px;
+    }
+    }
   }
 }
 .form {
