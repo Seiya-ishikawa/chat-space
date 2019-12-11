@@ -2,40 +2,28 @@ $(function(){
 
   function buildHTML(message){
     if(message.image){
-    var html = `<div class="messages">
-    <div class="messages__user-name">
-    <div class="messages__user-name--name">
-    ${message.user}
-    </div>
-    <div class="messages__user-name--time">
-    ${message.date}
-    </div>
-    </div>
-    <div class="messages__message">
-    <p class="messages__message--content">
-    ${message.content}
-    </p>
-    <img src="${message.image}">
-
-    </div>
-    </div>`
-    } else {
-      var html = `<div class="messages">
+    var html =
+    `<div class="messages">
       <div class="messages__user-name">
-      <div class="messages__user-name--name">
-      ${message.user}
-      </div>
-      <div class="messages__user-name--time">
-      ${message.date}
-      </div>
+       <div class="messages__user-name--name">${message.user}</div>
+       <div class="messages__user-name--time">${message.date}</div>
       </div>
       <div class="messages__message">
-      <p class="messages__message--content">
-      ${message.content}
-      </p>
-      
+        <p class="messages__message--content">${message.content}</p>
+        <img src="${message.image}">
       </div>
-      </div>`
+     </div>`
+    } else {
+    var html = 
+    `<div class="messages">
+      <div class="messages__user-name">
+        <div class="messages__user-name--name">${message.user}</div>
+        <div class="messages__user-name--time">${message.date}</div>
+      </div>
+      <div class="messages__message">
+       <p class="messages__message--content">${message.content}</p>
+      </div>
+     </div>`
     }
     return html
   }
