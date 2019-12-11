@@ -37,7 +37,6 @@ $(function(){
       </div>
       </div>`
     }
-    console.log(html)
     return html
   }
 
@@ -55,7 +54,6 @@ $(function(){
     })
     .done(function(message){
       var html = buildHTML(message);
-      console.log(html)
       $('.main-message').append(html);
       $('.new_message')[0].reset();
       $('.form__submit').attr('disabled', false);
