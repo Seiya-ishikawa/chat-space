@@ -60,7 +60,7 @@ $(function(){
       $('.main-message').animate({ scrollTop: $('.main-message')[0].scrollHeight});
     })
     .fail(function(){
-      alert("メッセージの送た");
+      alert("メッセージの送信に失敗しました");
     })
   })
 });
