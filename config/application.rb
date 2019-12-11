@@ -14,6 +14,8 @@ module ChatSpace
       g.helper false
       g.test_framework false
       config.i18n.default_locale = :ja
+      config.time_zone = 'Asia/Tokyo'
+      config.active_record.default_timezone = :utc
     end
   end
 end
