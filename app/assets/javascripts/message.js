@@ -45,6 +45,7 @@ $(function(){
       $('.main-message').animate({ scrollTop: $('.main-message')[0].scrollHeight});
     })
     .fail(function(){
+      alert("データの自動更新に失敗しました")
     });
   };
 };
