@@ -32,6 +32,7 @@ $(function(){
     var last_message_id = $('.messages:last').data('message-id');
     $.ajax({
       url: "api/messages",
+      type: 'get',
       dataType: 'json',
       data: {id: last_message_id}
     })
