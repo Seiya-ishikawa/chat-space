@@ -23,7 +23,6 @@ class GroupsController < ApplicationController
         render :edit
       end
     end
-  end
 
  private
  def group_params
@@ -31,5 +30,6 @@ class GroupsController < ApplicationController
  end
 
  def set_group
-  @group =Group.find(params[:id])
+  @group = Group.find(params[:id])
  end
+end

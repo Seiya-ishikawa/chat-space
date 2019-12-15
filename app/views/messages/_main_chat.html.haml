@@ -7,7 +7,7 @@
     - @user.each do |u|
      =u.name
     %end
-  =link_to edit_group_path(current_user), class: "main-header__btn" do
+  =link_to edit_group_path(@group.id), class: "main-header__btn" do
    .main-header__btn--edit
     Edit
  .main-message
