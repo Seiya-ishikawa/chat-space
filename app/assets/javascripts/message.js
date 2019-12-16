@@ -3,9 +3,9 @@ $(function(){
   function buildHTML(message){
     if(message.image){
     var html =
-    `<div class="messages">
+    `<div class="messages" data-message-id=${message.id}>
       <div class="messages__user-name">
-       <div class="messages__user-name--name">${message.user}</div>
+       <div class="messages__user-name--name">${message.name}</div>
        <div class="messages__user-name--time">${message.date}</div>
       </div>
       <div class="messages__message">
@@ -15,9 +15,9 @@ $(function(){
      </div>`
     } else {
     var html = 
-    `<div class="messages">
+    `<div class="messages" data-message-id=${message.id}>
       <div class="messages__user-name">
-        <div class="messages__user-name--name">${message.user}</div>
+        <div class="messages__user-name--name">${message.name}</div>
         <div class="messages__user-name--time">${message.date}</div>
       </div>
       <div class="messages__message">
@@ -27,6 +27,28 @@ $(function(){
     }
     return html
   }
+  var reloadMessages = function(){
+    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+    var last_message_id = $('.messages:last').data('message-id');
+    $.ajax({
+      url: "api/messages",
+      type: 'get',
+      dataType: 'json',
+      data: {id: last_message_id}
+    })
+    .done(function(messages){
+      var insertHTML = '';
+      $.each(messages, function(i, message){
+        insertHTML += buildHTML(message)
+      });
+      $('.main-message').append(insertHTML);
+      $('.main-message').animate({ scrollTop: $('.main-message')[0].scrollHeight});
+    })
+    .fail(function(){
+      alert("データの自動更新に失敗しました")
+    });
+  };
+};
 
   $('#new_message').on('submit', function(e){
     e.preventDefault();
@@ -51,4 +73,5 @@ $(function(){
       alert("メッセージの送信に失敗しました");
     })
   })
+  setInterval(reloadMessages, 7000);
 });
