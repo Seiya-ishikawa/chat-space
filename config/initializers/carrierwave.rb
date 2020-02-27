@@ -1,3 +1,4 @@
+require 'carrierwave/storage/abstract'
 require 'carrierwave/storage/file'
 require 'carrierwave/storage/fog'
 
@@ -11,6 +12,6 @@ CarrierWave.configure do |config|
     region: 'ap-northeast-1'
   }
 
-  config.fog_directory  = 'namenamelessless'
-  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/namenamelessless'
+  config.fog_directory  = 'backetman2020'
+  config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/backetman2020'
 end
